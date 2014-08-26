@@ -1,0 +1,26 @@
+<h1>InList</h1>
+
+<!-- Add Item Form -->
+<%= form_for @item do |f| %>
+
+  <%= f.text_field :name, placeholder: 'item name' %>
+
+  <%= f.submit 'Add Item' %>
+
+<% end %>
+
+
+<!-- Divider -->
+<hr><br>
+
+
+<!-- Item List -->
+<h1>Items</h1>
+
+<ul>
+<% @items.each do |i| %>
+
+  <li><%= i.name %></li>
+
+<% end %>
+</ul>
