@@ -5,6 +5,8 @@
 
   <%= f.text_field :name, placeholder: 'item name' %>
 
+  <%= f.text_field :tag_list, placeholder: 'tags' %>
+
   <%= f.submit 'Add Item' %>
 
 <% end %>
@@ -20,7 +22,25 @@
 <ul>
 <% @items.each do |i| %>
 
-  <li><%= i.name %></li>
+  <li>
+    <%= i.name %><br>
+    [ <%= i.tag_list %> ]
+  </li>
+
+<% end %>
+</ul>
+
+
+<!-- Item List with Tag '33' -->
+<h1>Items with Tag '33'</h1>
+
+<ul>
+<% @items_test.each do |i| %>
+
+  <li>
+    <%= i.name %><br>
+    [ <%= i.tag_list %> ]
+  </li>
 
 <% end %>
 </ul>
